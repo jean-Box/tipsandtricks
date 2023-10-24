@@ -3,7 +3,7 @@
 
 ### Voir les instance qui tourne
 
-ps -aux | grep pg
+`ps -aux | grep pg`
 
 ### dans l'instance postresql
 
@@ -19,6 +19,11 @@ find /pgqdata/pgoverlay/arch/ -type f -mtime +10 -exec rm {} \;
 psql -U postgres -h localhost
 psql -h 127.0.0.1 -d overlaycontroller  -c 'SELECT * FROM OVERLAYCONTROLLER;'
 psql -h 127.0.0.1 -d live -c 'SELECT * FROM live.t_chaine;'
+
+
+### Fichier conf
+`sudo finf / -name ph_hba.conf`
+`vim /pgdata/data/pg_hba.conf`
 
 ## Installer les modification
 
