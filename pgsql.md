@@ -38,17 +38,17 @@ Sélectionner la bonne instance PostgreSQL :
 Pour se positionner sur un environnement PostgreSQL : faire '. pgqenv'   
 Ensuite taper le numéro de la bonne instance PostgreSQL en fonction de votre besoin***   
 Lancer la migration de la BDD concernée : psql -h 127.0.0.1 -d {BDD_NAME} -f {EMPLACEMENT_FICHIER_MIGRATION}   
-Exemple : psql -h 127.0.0.1 -d bddname -f /opt/pgsql/scripts/sprint44/upgrade_table_G06R05C01P00_Postgres.sql   
+Exemple : psql -h 127.0.0.1 -d bddname -f /opt/pgsql/scripts/sprint44/upgrade_table__Postgres.sql   
 
 
 
 []$psql -h 127.0.0.1 -d bddname -f /opt/pgsql/scripts/sprint44/upgrade_table_G06R05C01P00_Postgres.sql   
-/opt/pgsql/scripts/sprint44/upgrade_table_G06R05C01P00_Postgres.sql: Permission denied	   
+/opt/pgsql/scripts/sprint44/upgrade_table__Postgres.sql: Permission denied	   
 il faut rendre postgres proprietaire des scripts. tu les as peut etre crées avec root   
 
 [root@]# chown postgres:postgres /opt/pgsql/   
 [root@]# chown postgres:postgres /opt/pgsql/scripts/    
 [root@]# chown postgres:postgres /opt/pgsql/scripts/sprint44/   
  
-[root@]# chown postgres:postgres /opt/pgsql/scripts/sprint44/upgrade_table_LIVE_G06R05C01P00_Postgres.sql    
-[root@]# chown postgres:postgres /opt/pgsql/scripts/sprint44/downgrade_table_LIVE_G06R05C01P00_Postgres.sql   
+[root@]# chown postgres:postgres /opt/pgsql/scripts/sprint44/upgrade_table__Postgres.sql    
+[root@]# chown postgres:postgres /opt/pgsql/scripts/sprint44/downgrade_table__Postgres.sql   
