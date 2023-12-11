@@ -1,6 +1,9 @@
 
 ## Postresql
 
+### User postgre par defaut
+`su - postgres`
+
 ### Voir les instance qui tourne
 
 `ps -aux | grep pg`   
