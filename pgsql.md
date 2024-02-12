@@ -1,6 +1,11 @@
 
 ## Postresql
 
+## SGBD 
+des soucis de droit bloque l'enregistrement des pwd sous linux avec inteliJ
+
+`jdbc:postgresql://localhost:5432/bdd-name?currentSchema=public&user=postgres&password=postgres`
+ 
 ### User postgre par defaut
 `su - postgres`
 
