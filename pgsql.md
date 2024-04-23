@@ -15,6 +15,9 @@ des soucis de droit bloque l'enregistrement des pwd sous linux avec inteliJ
 
 ### dans l'instance postresql
 
+`\c dbtruc` -> ce connecter a une bdd
+`\d` -> affiche toute les table de la bdd
+
 `pg_ctl status`   
 `pg_ctl start`   
 
