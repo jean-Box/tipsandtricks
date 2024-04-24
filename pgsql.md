@@ -19,6 +19,8 @@ des soucis de droit bloque l'enregistrement des pwd sous linux avec inteliJ
 `\d` -> affiche toute les table de la bdd   
 `\dn` -> list les schema d'une BDD   
 `\dt public.*` -> toutes les table sous le schema public   
+`SHOW search_path;` -> montre le schema par defaut   
+`SET search_path TO public;` -> set le schema par defaut     
 
 `pg_ctl status`   
 `pg_ctl start`   
