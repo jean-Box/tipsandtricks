@@ -1,5 +1,13 @@
 Capturer et analyser les paquets réseau
-Exemple de commande pour capturer tous les paquets réseau transitant entre la machine locale et n'importe quelle destination : tcpdump -i eth0 -w exemple_fichier.pcap
+Exemple de commande pour capturer tous les paquets réseau transitant entre la machine locale et n'importe quelle destination :
+
+```bash
+tcpdump -i eth0 -w exemple_fichier.pcap
+```
+
+```bash
+tcpdump -i eth1 port 8080 -vv
+```
 
 Ctrl + C pour terminer la capture
 
