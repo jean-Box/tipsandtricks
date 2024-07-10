@@ -52,3 +52,10 @@ to know witch port is in use -> ss -tulw
 ### lien symbolique
 
 `readlink -f app.war /opt/application/app/version/war/app-1.1.0.4-sprint38_9.war`   
+
+## ajouter une clé ssh 
+
+les fichier doivent être chmod 600 -rw-------
+ssh-add -D
+ssh-add /home/user/.ssh/ansible.key
+
