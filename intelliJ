@@ -1,0 +1,8 @@
+# IntelliJ Tip's
+
+## Kill process on linux
+
+```bash
+kill -9 $(ps aux | grep intellij | awk '{print $2}')
+```
+
