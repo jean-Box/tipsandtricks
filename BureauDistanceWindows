@@ -1,0 +1,8 @@
+# 
+
+## 
+regedit -> HKEY_CURRENT_USER -> Software -> Microsoft-> Terminal Server Client.
+  Edition-> Nouveau -> Valeur DWORD 32 bits.
+  Min Send Interval (avec les espaces)
+  Décimale et saisissez la valeur 10 pour 10 ms et validez par OK.
+  Modification effective immédiatement dès votre prochaine connexion à distance.
