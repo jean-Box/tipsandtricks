@@ -59,3 +59,8 @@ les fichier doivent être chmod 600 -rw-------
 ssh-add -D
 ssh-add /home/user/.ssh/ansible.key
 
+## quiter la session utilisateur 
+`exit`
+ou racourci clavier 
+Ctrl + D
+
