@@ -1,5 +1,8 @@
 # .ssh
 
+sources:
+- [www.rix.fr](https://www.rix.fr/blog/cours/utiliser-la-configuration-ssh-client)
+
 ## Arborescence cible
 
 ```
@@ -25,6 +28,13 @@ mkdir -p ~/.ssh/config && chmod 0700 ~/.ssh/config
 
 Dans le fichier config ajouter `Include config.d/config.d` ce qui aura pour effet d'ajouter tout le contenu du répertoire dans la config ssh,
 on peux alors facilement avoir un fichier de config par projet
+```
+Include config.d/*
+
+# Permet de vérifier la signature du serveur auquel on se connecte
+# auto valide message: ECDSA key fingerprint is  Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+StrictHostKeyChecking no
+```
 
 ### Créer le répertoire ou toutes les conf projet ce trouverons
 ```bash
