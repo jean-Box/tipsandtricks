@@ -1,14 +1,39 @@
 # .ssh
 
-Si le répertoire .ssh n'existe pas (il est créé automatiquement lorsque vous créez une nouvelle clé par exemple) vous pouvez le créer comme suit:
+## Arborescence cible
 
-```bash
-mkdir -p ~/.ssh && chmod 0700 ~/.ssh
+```
+.ssh/
+├── config
+├── key/
+│   ├── projet1/
+│   │   ├── cle1-env1.key
+│   │   └── cle2-env2.key   
+│   └── projet2/
+│       ├── cle1-env1.key
+│       └── cle2-env2.key
+└── config.d/
+    ├── projet1.cfg
+    ├── projet2.cfg
+    └── projet3.cfg
 ```
 
-Pour ensuite créer le fichier config
+### Créer le fichier config 
 ```bash
-touch ~/.ssh/config.d/switch.cfg && chmod 0600 ~/.ssh/config.d/switch.cfg
+mkdir -p ~/.ssh/config && chmod 0700 ~/.ssh/config
+```
+
+Dans le fichier config ajouter `Include config.d/config.d` ce qui aura pour effet d'ajouter tout le contenu du répertoire dans la config ssh,
+on peux alors facilement avoir un fichier de config par projet
+
+### Créer le répertoire ou toutes les conf projet ce trouverons
+```bash
+mkdir -p ~/.ssh/config.d && chmod 0700 ~/.ssh/config.d
+```
+
+### Créer le 1er fichier de conf projet 
+```bash
+touch ~/.ssh/config.d/projet1.cfg && chmod 0600 ~/.ssh/config.d/projet1.cfg
 ```
 
 Les droits
@@ -16,12 +41,8 @@ Les droits
 Attention SSH est très sensible (à juste titre) aux droits appliqués aux fichiers qu'il doit utiliser. 
 Le répertoire .ssh tout comme le fichier config ne doit être accessible, lisible et modifiable qu'à l'utilisateur propriétaire.
 
-```bash
-mkdir -p ~/.ssh/config.d && chmod 0700 ~/.ssh/config.d
-```
 
-Dans le fichier config ajouter `Include config.d/config.d` ce qui aura pour effet d'ajouter tout le contenu du répertoire dans la config ssh,
-on peux alors facilement avoir un fichier de config par projet
+## Les Clé Public 
 
 Ne pas mettre les clés dans le config.d si tu mets une étoile dans le Include du config.d
 Il faut pour ça qu'il faut créer répertoire keys dans .ssh avec un dossier par projet
@@ -33,13 +54,9 @@ mkdir -p ~/.ssh/key/projet1 && chmod 0700 ~/.ssh/key/projet1
 mkdir -p ~/.ssh/key/projet2 && chmod 0700 ~/.ssh/key/projet2
 ```
 
-
-```bash
-touch ~/.ssh/config.d/projet1.cfg && chmod 0600 ~/.ssh/config.d/projet1.cfg
-```
-
 Dans ce fichier vous pouvez déclarer vos machine 
 
+`~/.ssh/config.d/projet1.cfg`
 ```
 PermitLocalCommand true
  
