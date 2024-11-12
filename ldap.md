@@ -1,7 +1,13 @@
 # LDAP
 
+## Tuto
+
+[www.n0tes.fr](https://www.n0tes.fr/2022/12/28/Commande-ldapsearch/)
+
+
 ## Outils
-https://directory.apache.org/studio/download/download-linux.html
+
+[https://directory.apache.org](https://directory.apache.org/studio/download/download-linux.html)
 
 
 ## request
