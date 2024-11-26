@@ -64,3 +64,31 @@ ssh-add /home/user/.ssh/ansible.key
 ou racourci clavier 
 Ctrl + D
 
+
+## Stat ubuntu
+
+https://www.lemagit.fr/conseil/Cinq-commandes-Linux-pour-monitorer-les-performances-des-serveurs
+
+## htop
+Cmd de stat de la machine ram / cpu ...
+```
+htop
+```
+
+## iostat 
+stat de disque dure
+
+`sudo apt-get install sysstat`
+5 captures toutes les 2s   
+`iostat -t 2 5`
+
+## session rdp
+pour voir les instances fantomes de sessions rdp
+```
+ps -ef | grep -i rdp 
+```
+
+à tuer avec 
+```
+kill -9 <no_pid>
+```
