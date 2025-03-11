@@ -1,6 +1,7 @@
 # Tip's MAVEN
 
-## chiffrer un mdp 
+
+## Chiffrer un mdp 
 Depuis un invite de commandes exécuter la commande de génération du mot de passe chiffré :
 
 ```batch
