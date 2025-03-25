@@ -7,20 +7,21 @@ des soucis de droit bloque l'enregistrement des pwd sous linux avec inteliJ
 `jdbc:postgresql://localhost:5432/bdd-name?currentSchema=public&user=postgres&password=postgres`
  
 ### User postgre par defaut
-`su - postgres`
+`sudo su - postgres`
 
 ### Voir les instance qui tourne
 
 `ps -aux | grep pg`   
 
-### dans l'instance postresql
+### Cmd dans l'instance postresql
 
-`\c dbtruc` -> ce connecter a une bdd   
-`\d` -> affiche toute les table de la bdd   
-`\dn` -> list les schema d'une BDD   
-`\dt public.*` -> toutes les table sous le schema public   
-`SHOW search_path;` -> montre le schema par defaut   
-`SET search_path TO public;` -> set le schema par defaut     
+`\c dbtruc`  -> ce connecter a une bdd   
+`\d`  -> affiche toute les table de la bdd   
+`\dn`  -> list les schema d'une BDD   
+`\dt public.*`  -> toutes les table sous le schema public   
+`SHOW search_path;`  -> montre le schema par defaut   
+`SET search_path TO public;`  -> set le schema par defaut     
+`\d+ tablename`  -> describe datatable
 
 `pg_ctl status`   
 `pg_ctl start`   
@@ -32,8 +33,8 @@ des soucis de droit bloque l'enregistrement des pwd sous linux avec inteliJ
 ### request
 
 `psql -U postgres -h localhost`   
-`psql -h 127.0.0.1 -d overlaycontroller  -c 'SELECT * FROM OVERLAYCONTROLLER;'`   
-`psql -h 127.0.0.1 -d live -c 'SELECT * FROM live.t_chaine;'`   
+`psql -h 127.0.0.1 -d datatable  -c 'SELECT * FROM datatable;'`   
+`psql -h 127.0.0.1 -d datatable -c 'SELECT * FROM datatable.name;'`   
 
 
 ### Fichier conf
